@@ -1,0 +1,19 @@
+package heros_arena;
+class Wizard extends Entity{
+	
+	public Wizard(int health, int damage, String name, boolean stunned, boolean alive, boolean me, int x, int y, int height, int width, int speed) {
+		super(3000, 500, name, false, true, me, x, y, height, width, 300);
+	}
+	 
+	@Override
+	public void attack(Entity target) {
+		super.attack(target);
+		fireBall(target);
+	}
+	
+	public void fireBall(Entity target) {
+		target.takeDamage(this.getDamage());
+		//TODO give residual damage over time(1000ms)
+	}
+	
+}

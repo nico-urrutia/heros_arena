@@ -1,0 +1,4 @@
+ogre_punch.wav
+warrior_cry.wav
+goblin_cry.wav
+goblin_stab.wav

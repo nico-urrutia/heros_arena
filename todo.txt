@@ -1,0 +1,4 @@
+-Add jumping mechanics
+-Design graphic layout
+-Add sound effects(Won't play)
+-Colisiones
