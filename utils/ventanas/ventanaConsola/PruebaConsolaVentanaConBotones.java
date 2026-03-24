@@ -1,5 +1,4 @@
-package utils.ventanas.ventanaConsola;
-
+package heros_arena.utils.ventanas.ventanaConsola;
 import java.awt.Color;
 
 public class PruebaConsolaVentanaConBotones {

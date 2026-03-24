@@ -1,5 +1,5 @@
 package heros_arena;
-import utils.ventanas.ventanaBitmap.VentanaGrafica;
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
 public class Game{
 	static Entity winner;
 	public static Entity createSelectedEntity(int choice, String name, int x, int y, boolean isHero) {
@@ -23,10 +23,10 @@ public class Game{
 		String heroName = javax.swing.JOptionPane.showInputDialog(null, "Select a name for yourself: ");
 		
 		VentanaGrafica ventana = new VentanaGrafica(900, 600, "Hero's Arena");
-		Platform plat1 = new Platform(120, 450, 200, 20);
-		Platform plat2 = new Platform(650, 450, 200, 20); 
-		Platform plat3 = new Platform(400, 320, 300, 20); 
-		Platform plat4 = new Platform(400, 180, 150, 20); 
+		Platform plat1 = new Platform(100, 450, 200, 20);
+		Platform plat2 = new Platform(630, 450, 200, 20); 
+		Platform plat3 = new Platform(300, 320, 300, 20); 
+		Platform plat4 = new Platform(380, 180, 150, 20); 
 		Entity hero = createSelectedEntity(heroChoice, heroName , 200, 0, true);
 		Entity opp = createSelectedEntity(oppChoice, "Cletus", 600, 0, false);
 		hero.setY(ventana.getAltura()-hero.getHeight());
@@ -74,7 +74,8 @@ public class Game{
 	            opp.attack(hero);
 	        }
 	        ventana.borra();
-		    myHealth.draw(ventana, 20, 20);
+	        ventana.dibujaImagen("Resources/Backgrounds/game_background_4/game_background_4.png", ventana.getAnchura()/2, ventana.getAltura()/2, 0.3, 0.0, 1.0f );
+	        myHealth.draw(ventana, 20, 20);
 		    oppHealth.draw(ventana, 500, 20);
 		    java.awt.Color grisPlat = java.awt.Color.DARK_GRAY;
 		    java.awt.Color bordes = java.awt.Color.BLACK;

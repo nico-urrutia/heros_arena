@@ -1,6 +1,6 @@
 package heros_arena;
 import java.awt.Color;
-import utils.ventanas.ventanaBitmap.VentanaGrafica;
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
 
 public class Healthbar{
 	private float percentage;

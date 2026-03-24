@@ -1,4 +1,4 @@
-package utils.ventanas.ventanaConsola;
+package heros_arena.utils.ventanas.ventanaConsola;
 
 import java.io.FileNotFoundException;
 import java.io.PrintStream;

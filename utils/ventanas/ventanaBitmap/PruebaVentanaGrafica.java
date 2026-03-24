@@ -1,4 +1,4 @@
-package utils.ventanas.ventanaBitmap;
+package heros_arena.utils.ventanas.ventanaBitmap;
 
 import java.awt.Color;
 import java.awt.Font;
