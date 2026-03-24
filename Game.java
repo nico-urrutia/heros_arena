@@ -1,9 +1,7 @@
 package heros_arena;
 import utils.ventanas.ventanaBitmap.VentanaGrafica;
-import java.util.ArrayList;
 public class Game{
 	static Entity winner;
-	ArrayList<Integer> arturo;
 	public static Entity createSelectedEntity(int choice, String name, int x, int y, boolean isHero) {
 	    switch (choice) {
 	        case 0:
