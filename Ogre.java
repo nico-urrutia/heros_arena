@@ -1,4 +1,6 @@
 package heros_arena;
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
+
 class Ogre extends Entity{
 	boolean bombDropped = false;
 	public Ogre(int health, int damage, String name, boolean stunned, boolean poisoned, boolean alive, boolean me, int x, int y, int height, int width, int speed) {
@@ -35,6 +37,12 @@ class Ogre extends Entity{
 	public void dropBomb(Entity target) {
 		Bomb bomb = new Bomb(1000, 700, this.getX(), this.getY(), 100);
 		bomb.explode(target);
+	}
+
+	@Override
+	void draw(VentanaGrafica v) {
+		// TODO
+		
 	}
 	
 

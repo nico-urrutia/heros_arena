@@ -1,4 +1,7 @@
 package heros_arena;
+
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
+
 class Warrior extends Entity{
 	private boolean enraged = false;
 	
@@ -9,7 +12,7 @@ class Warrior extends Entity{
 	public Warrior(int health, int damage, String name, boolean stunned, boolean poisoned, boolean alive, boolean me, int x, int y, int height, int width, int speed) {
 		super(50000, 300, name, false, false, true, me, x, y, height, width, 25);
 	}
-	
+
 	@Override
 	public boolean attack(Entity target) {
 		if(super.attack(target)){
@@ -43,6 +46,11 @@ class Warrior extends Entity{
 	public void BerserkerRage() {
 		this.enraged = true;
 		this.setDamage((int)(getDamage()*1.2));
+	}
+
+	@Override
+	void draw(VentanaGrafica v) {
+		//TODO
 	}
 	
 }

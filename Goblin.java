@@ -2,6 +2,8 @@ package heros_arena;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
+
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
 class Goblin extends Entity{
 	private static final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 	public Goblin(int health, int damage, String name, boolean stunned, boolean poisoned, boolean alive, boolean me, int x, int y, int height, int width, int speed) {
@@ -46,5 +48,11 @@ class Goblin extends Entity{
 		scheduler.schedule(() -> {
 	        target.setPoisoned(false);
 	    }, 2000, TimeUnit.MILLISECONDS);
+	}
+
+	@Override
+	void draw(VentanaGrafica v) {
+		// TODO
+		
 	}																																											
 }

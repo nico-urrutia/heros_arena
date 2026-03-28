@@ -1,12 +1,15 @@
 package heros_arena;
 import java.util.Objects;
 import javax.sound.sampled.*;
+
+import heros_arena.utils.ventanas.ventanaBitmap.VentanaGrafica;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
-public class Entity{//Subclases: Warrior, Orc, Goblin
+abstract class Entity{//Subclases: Warrior, Orc, Goblin
 	private int health;
 	private int damage;
 	private String name;
@@ -26,7 +29,7 @@ public class Entity{//Subclases: Warrior, Orc, Goblin
 	private static final ScheduledExecutorService scheduler = Executors.newScheduledThreadPool(1);
 	private boolean isOnSolid =  true;
 	
-	protected void playSound(String soundFilePath) {
+	public void playSound(String soundFilePath) {
 	    try {
 	        File soundFile = new File(soundFilePath);
 	        AudioInputStream audioIn = AudioSystem.getAudioInputStream(soundFile);
@@ -37,6 +40,7 @@ public class Entity{//Subclases: Warrior, Orc, Goblin
 	        System.err.println("Error playing sound: " + e.getMessage());
 	    }
 	}
+	abstract void draw(VentanaGrafica v);
 	
 	public boolean isOnSolid() {
 		return isOnSolid;

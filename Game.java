@@ -35,6 +35,8 @@ public class Game{
 		int startingHealthOpp = opp.getHealth();
 		Healthbar myHealth = new Healthbar(100);
 		Healthbar oppHealth = new Healthbar(100);
+	    java.awt.Color grisPlat = java.awt.Color.DARK_GRAY;
+	    java.awt.Color bordes = java.awt.Color.BLACK;
 		
 		while (!ventana.estaCerrada()&&(opp.isAlive()||hero.isAlive())) {
 			float heroPerc = (float) hero.getHealth() / startingHealthHero * 100;
@@ -75,16 +77,15 @@ public class Game{
 	        }
 	        ventana.borra();
 	        ventana.dibujaImagen("Resources/Backgrounds/game_background_4/game_background_4.png", ventana.getAnchura()/2, ventana.getAltura()/2, 0.3, 0.0, 1.0f );
+		    ventana.dibujaRect(hero.getX(), hero.getY(), hero.getWidth(), hero.getHeight(), 2, bordes, java.awt.Color.BLUE);
+	        ventana.dibujaRect(opp.getX(), opp.getY(), opp.getWidth(), opp.getHeight(), 2, bordes, java.awt.Color.RED);
 	        myHealth.draw(ventana, 20, 20);
 		    oppHealth.draw(ventana, 500, 20);
-		    java.awt.Color grisPlat = java.awt.Color.DARK_GRAY;
-		    java.awt.Color bordes = java.awt.Color.BLACK;
 		    ventana.dibujaRect(plat1.getX(), plat1.getY(), plat1.getHeight(), plat1.getWidth(), 2, bordes, grisPlat);
 		    ventana.dibujaRect(plat2.getX(), plat2.getY(), plat2.getHeight(), plat2.getWidth(), 2, bordes, grisPlat);
 		    ventana.dibujaRect(plat3.getX(), plat3.getY(), plat3.getHeight(), plat3.getWidth(), 2, bordes, grisPlat);
 		    ventana.dibujaRect(plat4.getX(), plat4.getY(), plat4.getHeight(), plat4.getWidth(), 2, bordes, grisPlat);
-		    ventana.dibujaRect(hero.getX(), hero.getY(), hero.getWidth(), hero.getHeight(), 2, bordes, java.awt.Color.BLUE);
-	        ventana.dibujaRect(opp.getX(), opp.getY(), opp.getWidth(), opp.getHeight(), 2, bordes, java.awt.Color.RED);
+
 
 	        ventana.espera(20);
 	    }
