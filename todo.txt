@@ -1,5 +1,0 @@
--Add jumping mechanics
--Find graphic resources
--Implement draw() method in all Entity subclasses
--Add sound effects(Won't play)
--Colisiones

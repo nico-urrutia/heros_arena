@@ -87,7 +87,7 @@ public class Game{
 		    ventana.dibujaRect(plat4.getX(), plat4.getY(), plat4.getHeight(), plat4.getWidth(), 2, bordes, grisPlat);
 
 
-	        ventana.espera(20);
+	        ventana.espera(30);
 	    }
 		ventana.borra();
 		ventana.dibujaRect(winner.getX(), winner.getY(), winner.getWidth(), winner.getHeight(), 2, java.awt.Color.BLACK, java.awt.Color.GREEN);
