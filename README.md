@@ -23,10 +23,7 @@
 
 ## How to Run
 From the terminal or command prompt:
-```bash
-```
 
-```
 ##Todo list:
 -Find graphic resources
 	-Jumping sprite
