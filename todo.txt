@@ -1,0 +1,13 @@
+-Find graphic resources
+	-Jumping sprite
+	-Attacking sprite
+	-Walking sprites(x2)
+	-Platform graphics
+-Implement draw() method in all Entity subclasses
+-Add jumping mechanics
+-Colisiones
+-Como gestionar el cambio de imagen en el tiempo?
+
+PROBLEMS:
+-Frecuencia de actualizacion
+-Efectos de sonido no suenan
